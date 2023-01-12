@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Countries app</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="main.js" defer>
+   </script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+   <header>
+      <h1>Where in the world?</h1>
+      <button class="themeToggle" onclick="switchTheme()"><i class="fa-regular fa-moon"></i>Switch theme</button>
+   </header>
+   <div class="searchCountry">
+      <div class="searchInput">
+         <input type="text" name="searchCountryName" id="searchCountryName" placeholder="search for a country ..">
+         <label for="searchCountryName"><i class="fa-solid fa-magnifying-glass"></i></label>
+      </div>
+      <div class="regionFilter">
+         <select name="region" id="region">
+            <option value="All" selected hidden disabled>filter by region</option>
+         </select>
+      </div>
+   </div>
+   <section class="countriesGridContainer">
+      
+   </section>
+
+   <div class="countryPopupContainer active">
+      <div class="countryPopup">
+         <button class="back" onclick="closePopup()">← go back</button>
+         <div class="flag">
+            <img src="https://flagcdn.com/gd.svg" alt="gd flag">
+         </div>
+         <div class="description">
+            <h2 class="name">belgium</h2>
+            <div class="infos">
+               <p>Native Name: <span class="nativeName">Belgie</span></p>
+               <p>Population: <span class="population"></span></p>
+               <p>Region: <span class="region"></span></p>
+               <p>Sub Region: <span class="subRegion"></span></p>
+               <p>Capital: <span class="capital"></span></p>
+               <p>Top Level Domain: <span class="topLevelDomain"></span></p>
+               <p>Currencies: <span class="currencies"></span></p>
+               <p>Languages: <span class="languages"></span></p>
+
+            </div>
+            <div class="borderCountries">
+               <p>Border Countries: </p>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+</html>
